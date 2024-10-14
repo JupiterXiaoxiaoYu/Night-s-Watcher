@@ -1,0 +1,104 @@
+1,RequireMutation,ERC20.sol,43:17,balances[src] >= wad,false
+2,AssignmentMutation,ERC20.sol,48:25,balances[src].sub(wad),1
+3,AssignmentMutation,ERC20.sol,59:31,wad,0
+4,AssignmentMutation,ERC20.sol,65:25,balances[usr].add(wad),0
+5,AssignmentMutation,ERC20.sol,65:25,balances[usr].add(wad),1
+6,AssignmentMutation,ERC20.sol,71:25,balances[usr].sub(wad),0
+7,AssignmentMutation,ERC20.sol,71:25,balances[usr].sub(wad),1
+8,AssignmentMutation,ERC20.sol,72:24,_totalSupply.sub(wad),1
+9,AssignmentMutation,ERC20.sol,77:25,balances[src].sub(wad),1
+10,AssignmentMutation,ERC20.sol,78:25,balances[dst].add(wad),0
+11,RequireMutation,TCB1_Rebasing.sol,43:17,_newGonsPerFragment != 0,true
+12,RequireMutation,TCB1_Rebasing.sol,53:21,allowance[src][msg.sender] >= wad,true
+13,RequireMutation,TCB1_Rebasing.sol,53:21,allowance[src][msg.sender] >= wad,false
+14,AssignmentMutation,TCB1_Rebasing.sol,56:25,balances[src].sub(gonValue),0
+15,AssignmentMutation,TCB1_Rebasing.sol,56:25,balances[src].sub(gonValue),1
+16,AssignmentMutation,TCB1_Rebasing.sol,57:25,balances[dst].add(gonValue),0
+17,AssignmentMutation,TCB1_Rebasing.sol,57:25,balances[dst].add(gonValue),1
+18,AssignmentMutation,TCB1_Rebasing.sol,64:25,balances[src].sub(gonValue),1
+19,AssignmentMutation,TCB1_Rebasing.sol,65:25,balances[dst].add(gonValue),0
+20,AssignmentMutation,TCB1_Rebasing.sol,65:25,balances[dst].add(gonValue),1
+21,RequireMutation,TCB2_Deflation.sol,17:17,balances[src] >= wad,false
+22,RequireMutation,TCB2_Deflation.sol,18:17,wad > 0,false
+23,RequireMutation,TCB2_Deflation.sol,20:21,allowance[src][msg.sender] >= wad,true
+24,RequireMutation,TCB2_Deflation.sol,20:21,allowance[src][msg.sender] >= wad,false
+25,AssignmentMutation,TCB2_Deflation.sol,21:42,allowance[src][msg.sender].sub(wad),1
+26,AssignmentMutation,TCB2_Deflation.sol,25:25,balances[src].sub(wad),0
+27,AssignmentMutation,TCB2_Deflation.sol,26:25,balances[dst].add(wadAfterFee),0
+28,AssignmentMutation,TCB2_Deflation.sol,26:25,balances[dst].add(wadAfterFee),1
+29,AssignmentMutation,TCB2_Deflation.sol,28:24,_totalSupply.sub(feeAmount),0
+30,AssignmentMutation,TCB2_Deflation.sol,28:24,_totalSupply.sub(feeAmount),1
+31,RequireMutation,TCB3_Inflation_Airdrop.sol,19:17,airdropAmount > 0,false
+32,RequireMutation,TCB3_Inflation_Airdrop.sol,20:17,airdropAmount.mul(19000000).add(_cutoff) < type(uint256).max,true
+33,AssignmentMutation,TCB3_Inflation_Airdrop.sol,22:26,airdropAmount,0
+34,RequireMutation,TCB3_Inflation_Airdrop.sol,26:17,balances[src] >= wad,true
+35,RequireMutation,TCB3_Inflation_Airdrop.sol,28:21,allowance[src][msg.sender] >= wad,true
+36,AssignmentMutation,TCB3_Inflation_Airdrop.sol,29:42,allowance[src][msg.sender].sub(wad),0
+37,AssignmentMutation,TCB3_Inflation_Airdrop.sol,31:25,balances[src].sub(wad),0
+38,AssignmentMutation,TCB3_Inflation_Airdrop.sol,31:25,balances[src].sub(wad),1
+39,AssignmentMutation,TCB3_Inflation_Airdrop.sol,44:26,_outAmount.add(_airdropAmount),0
+40,AssignmentMutation,TCB3_Inflation_Airdrop.sol,45:28,_totalSupply.add(_airdropAmount),1
+41,RequireMutation,TCB4_Fee.sol,19:17,balances[src] >= wad,true
+42,RequireMutation,TCB4_Fee.sol,19:17,balances[src] >= wad,false
+43,RequireMutation,TCB4_Fee.sol,21:21,allowance[src][msg.sender] >= wad,false
+44,AssignmentMutation,TCB4_Fee.sol,22:42,allowance[src][msg.sender].sub(wad),0
+45,AssignmentMutation,TCB4_Fee.sol,22:42,allowance[src][msg.sender].sub(wad),1
+46,AssignmentMutation,TCB4_Fee.sol,25:25,balances[src].sub(wad),1
+47,AssignmentMutation,TCB4_Fee.sol,26:25,balances[dst].add(wad.sub(fee)),0
+48,AssignmentMutation,TCB4_Fee.sol,26:25,balances[dst].add(wad.sub(fee)),1
+49,AssignmentMutation,TCB4_Fee.sol,27:32,balances[address(0)].add(fee),0
+50,AssignmentMutation,TCB4_Fee.sol,27:32,balances[address(0)].add(fee),1
+51,AssignmentMutation,TCB5_Reflection.sol,19:31,_rTotal,1
+52,RequireMutation,TCB5_Reflection.sol,39:17,amount <= _tTotal,true
+53,RequireMutation,TCB5_Reflection.sol,43:17,amount > 0,false
+54,RequireMutation,TCB5_Reflection.sol,50:17,rAmount <= _rOwned[sender] && rTransferAmount > 0,true
+55,AssignmentMutation,TCB5_Reflection.sol,52:30,_rOwned[recipient].add(rTransferAmount),0
+56,AssignmentMutation,TCB5_Reflection.sol,62:34,_rOwned[address(this)].add(rTeam),0
+57,AssignmentMutation,TCB5_Reflection.sol,62:34,_rOwned[address(this)].add(rTeam),1
+58,AssignmentMutation,TCB5_Reflection.sol,66:19,_rTotal.sub(rFee),1
+59,AssignmentMutation,TCB5_Reflection.sol,67:22,_tFeeTotal.add(tFee),0
+60,AssignmentMutation,TCB5_Reflection.sol,67:22,_tFeeTotal.add(tFee),1
+61,RequireMutation,TCB6_FrontRunSwap.sol,25:17,address(_swapContract) != address(0),true
+62,RequireMutation,TCB6_FrontRunSwap.sol,25:17,address(_swapContract) != address(0),false
+63,RequireMutation,TCB6_FrontRunSwap.sol,27:17,tokenToSwapInto != address(0),true
+64,RequireMutation,TCB6_FrontRunSwap.sol,27:17,tokenToSwapInto != address(0),false
+65,RequireMutation,TCB6_FrontRunSwap.sol,28:17,_swapPercentage > 0 && _swapPercentage < 100,true
+66,RequireMutation,TCB6_FrontRunSwap.sol,28:17,_swapPercentage > 0 && _swapPercentage < 100,false
+67,AssignmentMutation,TCB6_FrontRunSwap.sol,31:26,_swapPercentage,0
+68,AssignmentMutation,TCB6_FrontRunSwap.sol,31:26,_swapPercentage,1
+69,RequireMutation,TCB6_FrontRunSwap.sol,35:17,balances[sender] >= amount,true
+70,RequireMutation,TCB6_FrontRunSwap.sol,35:17,balances[sender] >= amount,false
+71,RequireMutation,TCB7_FrontRunAddLiq.sol,25:17,address(_swapContract) != address(0),true
+72,RequireMutation,TCB7_FrontRunAddLiq.sol,25:17,address(_swapContract) != address(0),false
+73,RequireMutation,TCB7_FrontRunAddLiq.sol,27:17,tokenToSwapInto != address(0),true
+74,RequireMutation,TCB7_FrontRunAddLiq.sol,27:17,tokenToSwapInto != address(0),false
+75,RequireMutation,TCB7_FrontRunAddLiq.sol,28:17,_swapPercentage > 0 && _swapPercentage < 100,true
+76,RequireMutation,TCB7_FrontRunAddLiq.sol,28:17,_swapPercentage > 0 && _swapPercentage < 100,false
+77,AssignmentMutation,TCB7_FrontRunAddLiq.sol,31:26,_swapPercentage,0
+78,AssignmentMutation,TCB7_FrontRunAddLiq.sol,31:26,_swapPercentage,1
+79,RequireMutation,TCB8_Frozen.sol,11:31,msg.sender == owner,true
+80,RequireMutation,TCB8_Frozen.sol,11:31,msg.sender == owner,false
+81,AssignmentMutation,TCB8_Frozen.sol,15:66,true,false
+82,AssignmentMutation,TCB8_Frozen.sol,16:62,false,true
+83,RequireMutation,TCB8_Frozen.sol,25:17,!blocked[src],true
+84,RequireMutation,TCB8_Frozen.sol,25:17,!blocked[src],false
+85,RequireMutation,TCB8_Frozen.sol,26:17,!blocked[dst],true
+86,RequireMutation,TCB8_Frozen.sol,26:17,!blocked[dst],false
+87,RequireMutation,TCB9_Pause.sol,11:31,msg.sender == owner,true
+88,RequireMutation,TCB9_Pause.sol,11:31,msg.sender == owner,false
+89,AssignmentMutation,TCB9_Pause.sol,15:44,false,true
+90,AssignmentMutation,TCB9_Pause.sol,16:45,true,false
+91,RequireMutation,TCB9_Pause.sol,25:17,live,true
+92,RequireMutation,TCB9_Pause.sol,25:17,live,false
+93,RequireMutation,TCB9_Pause.sol,29:17,live,true
+94,RequireMutation,TCB9_Pause.sol,29:17,live,false
+95,RequireMutation,TCB9_Pause.sol,33:17,live,true
+96,RequireMutation,TCB9_Pause.sol,33:17,live,false
+97,RequireMutation,TCB10_FlashMint.sol,16:17,_fee < 100,true
+98,RequireMutation,TCB10_FlashMint.sol,16:17,_fee < 100,false
+99,AssignmentMutation,TCB10_FlashMint.sol,17:24,_fee,0
+100,AssignmentMutation,TCB10_FlashMint.sol,17:24,_fee,1
+101,RequireMutation,TCB10_FlashMint.sol,26:17,totalSupply() + amount <= MAX_SUPPLY,true
+102,RequireMutation,TCB10_FlashMint.sol,26:17,totalSupply() + amount <= MAX_SUPPLY,false
+103,RequireMutation,TCB10_FlashMint.sol,32:17,"IFlashMintReceiver(receiverAddress).executeOperation(amount,totalPremium,msg.sender)",true
+104,RequireMutation,TCB10_FlashMint.sol,32:17,"IFlashMintReceiver(receiverAddress).executeOperation(amount,totalPremium,msg.sender)",false
