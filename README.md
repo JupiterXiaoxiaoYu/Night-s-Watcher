@@ -1,3 +1,17 @@
+**Related Resources**
+Demo Video: https://youtu.be/hqfbKLt9ll4
+Abnormal Detection AI Model Files: https://drive.google.com/drive/folders/12sopwv0cmZBEruWX5bFA9G-QeUDdaEOG?usp=drive_link
+AI Training and Inference Code: https://drive.google.com/drive/folders/1bBnUpREW3McGhp71Ml4tXjmVlb-lid-K?usp=drive_link
+
+##Track
+Chain agnostic track and ZettaBlock - AI/Web3 Bounty
+Here's how Night’s Watcher meets the sponsor(ZettaBlock) requirements:
+
+1. **dApp for AI-Driven On-Chain Trading Fraud Detection:** Night’s Watcher serves as a decentralized application specifically built for on-chain fraud detection. By integrating AI and Web3 data, it provides comprehensive monitoring and real-time risk alerts, identifying high-risk transactions, abnormal accounts, and potential vulnerabilities in smart contracts.
+
+2. **Use of Web3 Data and AI Modeling:** The project employs extensive Web3 transaction data and combines it with an AI model trained to detect risky accounts. With fine-tuning to analyze specific tags, the model leverages blockchain data to identify malicious patterns in transactions and contract interactions.
+
+3. **Innovative Fraud Detection with Small Sample Learning:** Night’s Watcher is unique in applying small sample learning to assess high-risk accounts and contracts, even with limited initial data. This enables efficient detection of trading fraud, such as phishing, rug pulls, and liquidity vulnerabilities.
 
 ## Project Overview
 Night's Watcher is an innovative blockchain security monitoring tool that combines AI with formal verification to provide users with comprehensive risk identification and alerts. This tool focuses on detecting abnormal accounts and potential contract risks in blockchain transactions, aiming to ensure user security in new ecosystems, applications, and assets.
