@@ -1,63 +1,48 @@
-# Night's Watcher
+**Project Overview**  
+Night's Watcher is an innovative blockchain security monitoring tool that combines AI with formal verification to provide users with comprehensive risk identification and alerts. This tool focuses on detecting abnormal accounts and potential contract risks in blockchain transactions, aiming to ensure user security in new ecosystems, applications, and assets.
 
-[Deck PDF](Nights-Watcher.pdf)
+**Features**  
 
-## 项目简介
+**Innovation in Small Sample Learning Application**  
+Night's Watcher is the first project in the industry to use small sample learning to identify high-risk accounts and smart contracts. By pre-training on a large dataset of Ethereum transactions and fine-tuning for four specific tags, Night's Watcher can accurately identify suspicious accounts. Even with limited sample data, it effectively detects potential risks.
 
-Night's Watcher 是一款创新性的区块链安全监控工具，旨在通过 AI 和形式化验证相结合的方式，为用户提供全面的风险识别与提示。该工具专注于检测区块链交易中的异常账户与潜在合约风险，致力于确保用户在新生态、新应用以及新资产中拥有安全保障。
+**Multi-Dimensional Economic Security Formal Verification**  
+The project also innovatively integrates Certora formal verification technology to analyze and validate interactions related to economic security (such as AMM and lending protocols). This is one of the few tools in the industry that provides comprehensive formal verification of economic security properties for smart contract interactions, automatically detecting potential threats like liquidity vulnerabilities, phishing attacks, and rug pull risks.
 
-## 特质
+**Progress and Effort**  
 
-### 创新性
+**Model Training and Fine-Tuning**  
+We have completed model pre-training on large-scale Ethereum transaction data and fine-tuned it for four specific tags (e.g., blacklisted accounts, high-risk accounts). Through this training and optimization, Night's Watcher can accurately identify abnormal accounts, providing users with efficient risk alerts.
 
-1. **小样本学习的应用**  
-   Night's Watcher 是行业中第一个使用 **小样本学习** 来进行风险账户和智能合约识别的项目。通过预训练大规模的以太坊交易数据，并针对四个标签进行微调，使得 Night's Watcher 能够精准识别异常账户。即使样本数据有限，依然能够有效地检测潜在的风险。
+**Identification of Blacklisted Accounts and Risk Alerts/Reports**  
+Night's Watcher can detect blacklisted accounts across a batch of smart contracts. Users simply input the addresses of interest, and the system will automatically analyze related high-risk accounts, providing risk alerts and detailed reports on these contracts.
 
-2. **多种经济安全属性的形式化验证**  
-   本项目还开创性地结合 **Certora** 形式化验证技术，针对多个与经济安全相关的交互（如 AMM 和 Lending 协议）进行分析与验证。这是行业内少有的对智能合约间交互的经济安全属性进行全面形式化验证的工具，能够自动检测流动性可用性、钓鱼攻击以及 Rug Pull 风险等潜在威胁。
+**Formal Verification**  
+The system supports formal verification for smart contracts in Solidity version 6.0 and above. The verification focuses on economic security properties such as liquidity vulnerabilities, phishing attack risks, and rug pull risks. Through formal verification, Night's Watcher can quantify the risk level and provide corresponding alerts and recommendations. (Sample Formal Verification Report)
 
-### 完成度与工作量
+**Feasibility and Future Development**  
+Future development directions include:
 
-1. **模型训练与微调**  
-   我们已经完成了基于大规模以太坊交易数据的模型预训练，并且针对 **四个特定标签**（如黑灰账户、风险账户）进行了微调。通过这些训练与优化，Night's Watcher 能够精确识别异常账户，为用户提供高效的风险提示。
+1. **Network-Wide Transaction Processing**: We will gradually process network-wide transactions to enable the model to identify blacklisted accounts. By obtaining a comprehensive blacklist, we can offer more comprehensive risk alerts for the respective smart contracts.
+   
+2. **Expanding Formal Verification Categories**: As the system evolves, we will continue to add more smart contract and interaction scenarios for formal verification, further enhancing Night's Watcher’s security detection capabilities.
 
-2. **黑灰账户识别与风险提示/报告**  
-   Night's Watcher 能够对一批智能合约进行黑灰账户的识别。用户只需输入其中感兴趣的合约地址，系统即可自动分析相关的风险账户，并给出针对这些合约的风险提示和详细的风险报告。
+**Social Value**  
+According to statistics, the blockchain industry lost $743 million to security vulnerabilities in Q3 2024, with the Ethereum ecosystem most affected. Night's Watcher empowers users with advanced capabilities to detect emerging risks, vulnerabilities, and suspicious accounts, providing robust security in exploring new ecosystems, applications, and assets.
 
-3. **形式化验证**  
-   系统支持对 Solidity 6.0 及以上版本的智能合约进行形式化验证。验证的重点涵盖经济安全属性，如 **流动性可用性**、**钓鱼攻击风险** 和 **Rug Pull 风险** 等。通过形式化验证，Night's Watcher 能够量化风险级别，并为用户提供相应的提示与建议。[示例形式化验证报告](https://prover.certora.com/output/686351/4a807374221d4249a1e9647394190558?anonymousKey=036134a79f706d89744035bb0c455f9ede475492)
+By proactively identifying potential security threats and issuing risk alerts, Night's Watcher contributes to the healthy development of the blockchain ecosystem, helping reduce asset losses for users in emerging ecosystems.
 
-### 可行性
+**Code Modularity**  
+Night's Watcher is built with a high-quality code architecture, utilizing a modular design to ensure code maintainability and scalability:
 
-未来的发展方向包括：
+- **AI Training Module**: Manages model pre-training and fine-tuning, supporting iterative training and optimization with new data.
+- **AI Inference Module**: Handles online inference, analyzing user-inputted contracts in real time and outputting detection results.
+- **Blacklist/Whitelist Database Matching Module**: Stores and manages detected blacklisted accounts for efficient querying and risk assessment.
+- **Frontend Module**: Provides a user-friendly interface displaying risk alerts, verification results, and reports.
+- **Formal Verification Module**: Conducts Certora formal verification on smart contracts and outputs actionable verification reports.
+- **AI Reporting Module**: Presents technical detection reports to users in an easy-to-understand format.
 
-- **全网交易处理**：我们将逐步处理全网交易，完成模型对黑灰名单账户的识别。通过获取完整的黑灰名单，将能够对相应的智能合约进行更加全面的风险提示。
-- **扩展形式化验证类别**：随着系统的发展，我们会继续增加对更多智能合约和交互场景的形式化验证类别，进一步提升 Night's Watcher 的安全检测能力。
+Night's Watcher's code design ensures efficient collaboration between modules and flexibility for future feature additions and evolving needs.
 
-### 社会价值
-
-根据统计，2024 年第三季度，区块链行业因安全漏洞损失了 **7.43 亿美元**，以太坊生态首当其冲。Night's Watcher 的工作为用户提供了新型风险、漏洞以及异常账户的识别能力，能够为用户在体验新生态、新应用与新资产时提供有力的安全保障。
-
-通过对潜在安全威胁的前瞻性识别和风险提示，Night's Watcher 助力区块链生态的健康发展，减少用户在新兴生态下的资产损失。
-
-### 代码模块化
-
-Night's Watcher 具备高质量的代码架构，采用 **模块化设计**，确保代码的可维护性与扩展性：
-
-1. **AI训练模块**：处理模型的预训练与微调，支持新数据的迭代训练与优化。
-2. **AI推理模块**：负责在线推理，实时分析用户输入的合约并输出检测结果。
-3. **黑白名单数据库匹配模块**：存储和管理经过检测的黑灰名单账户，便于高效查询与风险评估。
-4. **前端模块**：为用户提供友好的交互界面，展示风险提示、验证结果及报告。
-5. **形式化验证模块**：负责对智能合约进行 Certora 形式化验证，并输出可操作的验证报告。
-6. **AI报告模块**：负责将专业的检测报告以易懂的方式呈现给用户。
-
-Night's Watcher 的代码设计确保了各模块之间的高效协同，并且可以灵活扩展以适应未来功能的增加和需求的变化。
-
-## 相关资源
-
-- [项目Demo演示视频](https://youtu.be/5TiWl-mb92c)
-- [Deck文档链接](https://gamma.app/docs/Nights-Watcher--ibfd3i7w5v71nv8)
-
-## 结论
-
-Night's Watcher 通过创新的技术、强大的功能和可靠的代码架构，致力于为区块链用户提供全面的安全保障。未来，我们将继续推进模型的优化与形式化验证的扩展，为用户创造更安全的区块链使用体验。
+**Conclusion**  
+Through innovative technology, powerful features, and a reliable code architecture, Night's Watcher is committed to providing comprehensive security for blockchain users. In the future, we will continue to improve model optimization and expand formal verification, creating a safer blockchain experience for users.
